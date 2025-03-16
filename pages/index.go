@@ -1,8 +1,6 @@
 package pages
 
 import (
-	"os"
-
 	"github.com/maddalax/htmgo/framework/h"
 )
 
@@ -67,12 +65,4 @@ func IndexPage(ctx *h.RequestContext) *h.Page {
 			),
 		),
 	)
-}
-
-func readSVGFromFile(filePath string) string {
-	if data, err := os.ReadFile(filePath); err != nil {
-		panic(err)
-	} else {
-		return string(data)
-	}
 }
